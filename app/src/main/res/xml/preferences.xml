@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/channel_name"
+        android:key="expense_preferences">
+
+        <EditTextPreference
+            android:key="min_amount"
+            android:title="Monto Mínimo"
+            android:summary="Filtrar transacciones menores a este monto"
+            android:defaultValue="0"
+            android:inputType="numberDecimal" />
+
+    </PreferenceCategory>
+</PreferenceScreen>
