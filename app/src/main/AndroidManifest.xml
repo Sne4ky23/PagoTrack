@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions for notification listener service -->
+    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_schemes"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PagoTrack"
+        tools:targetApi="31">
+
+        <activity
+            android:name="com.pagotrack.app.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.PagoTrack">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- NotificationListenerService for intercepting payment notifications -->
+        <service
+            android:name="com.pagotrack.app.service.PaymentNotificationListener"
+            android:exported="true"
+            android:label="@string/notification_listener_label"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <!-- BroadcastReceiver for handling notification action buttons -->
+        <receiver
+            android:name="com.pagotrack.app.service.NotificationActionReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.pagotrack.app.action.EXPENSE_CONFIRM" />
+                <action android:name="com.pagotrack.app.action.EXPENSE_DISCARD" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
