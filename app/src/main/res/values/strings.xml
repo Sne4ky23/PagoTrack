@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PagoTrack</string>
+    <string name="notification_listener_label">PagoTrack Notification Listener</string>
+    <string name="channel_name">Expense Notifications</string>
+    <string name="channel_description">Notifications for confirming or discarding expenses</string>
+    <string name="notification_title">Nueva transacción detectada</string>
+    <string name="action_confirm">✅ Guardar</string>
+    <string name="action_discard">❌ Descartar</string>
+    <string name="total_spent_today">Total gastado hoy</string>
+    <string name="recent_transactions">Transacciones recientes</string>
+    <string name="status_confirmed">Guardado</string>
+    <string name="status_pending">Pendiente</string>
+    <string name="permission_required">Permiso necesario</string>
+    <string name="permission_message">PagoTrack necesita permiso para acceder a las notificaciones. Por favor, actívalo en los ajustes.</string>
+    <string name="grant_permission">Otorgar permiso</string>
+    <string name="home">Inicio</string>
+    <string name="settings">Ajustes</string>
+    <string name="clear_database">Limpiar base de datos</string>
+    <string name="clear_database_desc">Eliminar todas las transacciones guardadas</string>
+    <string name="confirm_clear">¿Estás seguro de que deseas eliminar todas las transacciones?</string>
+    <string name="cancel">Cancelar</string>
+    <string name="delete">Eliminar</string>
+    <string name="no_transactions">No hay transacciones</string>
+    <string name="merchant">Comercio: %s</string>
+    <string name="amount">Importe: %s</string>
+    <string name="date">Fecha: %s</string>
+</resources>
